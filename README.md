@@ -1,0 +1,2 @@
+Example training cmd
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 time python Trainers/unet_whisper_train.py --wandb --supported_snrs Q 8 6 4 2 --enhancement_loss --batch_size 16 --gradient_accumulation_steps 1 --whisper_name base --enhancement_weight 0.9 --ce_weight 0.1 --gpus 8 --lr 0.0005 --loss_update_epoch 50 --train-data Data/librispeech_all_Q.csv --val_batch_size 32 --warmup_epoch 1 --white --packet-loss --reverb --pub --weight_decay 0.9
